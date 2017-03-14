@@ -23,7 +23,7 @@ namespace YTS.Mobile.Helpers
         /// <param name="accessToken">The accessToken.</param>
         /// <param name="settings">The settings.</param>
         /// <returns>Task&lt;T&gt;.</returns>
-        public Task<T> GetAsync<T>(string url, string accessToken, JsonSerializerSettings settings) where T : new()
+        public Task<T> GetAsync<T>(string url, string accessToken="", JsonSerializerSettings settings=null) where T : new()
         {
             return this.GetAsync<T>(url, CancellationToken.None, accessToken, settings);
         }
@@ -70,6 +70,10 @@ namespace YTS.Mobile.Helpers
             return this.GetAsync<T>(AddUrlParams(baseUrl, parameters), CancellationToken.None, accessToken, settings);
         }
 
+        public Task<T> GetAsync<T>(string baseUrl, Dictionary<string, object> parameters) where T : new()
+        {
+            return this.GetAsync<T>(AddUrlParams(baseUrl, parameters), CancellationToken.None, "",null);
+        }
         /// <summary>
         /// Gets the asynchronous.
         /// </summary>
@@ -272,6 +276,7 @@ namespace YTS.Mobile.Helpers
         /// <returns>System.String.</returns>
         private static string AddUrlParams(string baseUrl, Dictionary<string, object> parameters)
         {
+            if (parameters == null) throw new ArgumentNullException(nameof(parameters));
             var stringBuilder = new StringBuilder(baseUrl);
             var hasFirstParam = baseUrl.Contains("?");
 

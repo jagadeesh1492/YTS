@@ -38,6 +38,8 @@
     <Compile Include="JsonModel\MoviesList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="JsonModel\Torrent.cs" />
+    <Compile Include="Service\AcountsService.cs" />
+    <Compile Include="Service\MoviesService.cs" />
     <Compile Include="Utilities\Constants.cs" />
   </ItemGroup>
   <ItemGroup>
