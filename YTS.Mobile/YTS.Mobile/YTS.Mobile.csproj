@@ -31,6 +31,7 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Helpers\JsonService.cs" />
     <Compile Include="JsonModel\Data.cs" />
     <Compile Include="JsonModel\Meta.cs" />
     <Compile Include="JsonModel\Movie.cs" />
@@ -39,8 +40,6 @@
     <Compile Include="JsonModel\Torrent.cs" />
     <Compile Include="Utilities\Constants.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>
