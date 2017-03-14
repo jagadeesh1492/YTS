@@ -8,5 +8,6 @@ namespace YTS.Mobile.Helpers
 {
     public class JsonService
     {
+
     }
 }

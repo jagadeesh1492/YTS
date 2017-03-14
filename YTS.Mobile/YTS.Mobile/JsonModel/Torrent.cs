@@ -1,4 +1,4 @@
-namespace YTS.Mobile
+namespace YTS.Mobile.JsonModel
 {
     public class Torrent
     {

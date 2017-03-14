@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace YTS.Mobile
+namespace YTS.Mobile.JsonModel
 {
     public class Data
     {

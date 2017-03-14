@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace YTS.Mobile
+﻿namespace YTS.Mobile.JsonModel
 {
     public class MoviesList
     {
